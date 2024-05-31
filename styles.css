@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+}
+
+header, .offer, nav {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    font-size: larger;
+    padding-left: 10px;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.offer {
+    text-align: center;
+    background-color: rgb(236, 190, 6);
+    padding: 12px;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.offer:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+nav {
+    padding: 5px;
+    background-color: #333;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: large;
+    position: relative;
+}
+
+nav .nav-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+nav .nav-logos a {
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    padding: 10px;
+    padding-right: 30px;
+}
+
+nav .nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+nav .nav-links a:hover::before {
+    width: 100%;
+}
+
+nav .nav-logos a:hover::before {
+    width: 0;
+}
+
+.fruits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+#fruitimage {
+    clip-path: circle(47.6% at 50% 50%);
+    transition: all 0.2s ease;
+}
+
+#fruitimage:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.fruits div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#addtocartbtn {
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    background-color: #007bff;
+    border: none;
+}
+
+#addtocartbtn:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0px;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    font-size: large;
+}
+
+#footerlink{
+    text-decoration: none;
+    color: white;
+}
+
+#footerlink:hover{
+    color: rgb(145, 131, 131);
+}
+  
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    header {
+        font-size: medium;
+    }
+
+    h1 {
+        font-size: large;
+    }
+
+    h2 {
+        font-size: medium;
+    }
+
+    .offer {
+        font-size: small;
+    }
+
+    nav .nav-links {
+        gap: 20px;
+    }
+
+    .fruits {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
